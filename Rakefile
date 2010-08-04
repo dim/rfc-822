@@ -13,11 +13,11 @@ end
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "rfc822"
+    gemspec.name = "rfc-822"
     gemspec.summary = "RFC822 compatible email validation and MX record check"
     gemspec.description = "RFC822 compatible email validation and MX record check"
     gemspec.email = "dimitrij@blacksquaremedia.com"
-    gemspec.homepage = "http://github.com/dim/rfc822"
+    gemspec.homepage = "http://github.com/dim/rfc-822"
     gemspec.authors = ["Dimitrij Denissenko"]
   end
   Jeweler::GemcutterTasks.new

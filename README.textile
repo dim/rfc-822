@@ -17,6 +17,10 @@ h6. Download from GitHub
 
 bc. wget http://github.com/dim/rfc822/tarball/master
 
+h6. As a GEM
+
+bc. ruby script/plugin install rfc
+
 h6. Clone from GitHub
 
 bc. git clone git://github.com/dim/rfc822.git
@@ -29,9 +33,9 @@ bc. ruby script/plugin install git://github.com/dim/rfc822.git
 
 h2. Usage Examples
 
-bc. validates_format_of :email, :with => RFC822::EMAIL 
+bc. validates_format_of :email, :with => RFC822::EMAIL
 
-bc. "user@home.domain.com" =~ RFC822::EMAIL ? puts("Email is valid.") : puts("Email is invalid") 
+bc. "user@home.domain.com" =~ RFC822::EMAIL ? puts("Email is valid.") : puts("Email is invalid")
 
 
 h2. License
@@ -43,4 +47,3 @@ Please see LICENSE document
 h2. Acknowledgements
 
 * Inspired by previous work of Cal Henderson, Tim Fletcher and Dan Kubb.
- 
