@@ -15,19 +15,19 @@ h2. Installation
 
 h6. Download from GitHub
 
-bc. wget http://github.com/dim/rfc822/tarball/master
+bc. wget http://github.com/dim/rfc-822/tarball/master
 
 h6. As a GEM
 
-bc. ruby script/plugin install rfc
+bc. gem install rfc-822
 
 h6. Clone from GitHub
 
-bc. git clone git://github.com/dim/rfc822.git
+bc. git clone git://github.com/dim/rfc-822.git
 
 h6. As a Rails plugin
 
-bc. ruby script/plugin install git://github.com/dim/rfc822.git
+bc. ruby script/plugin install git://github.com/dim/rfc-822.git
 
 
 
@@ -35,7 +35,10 @@ h2. Usage Examples
 
 bc. validates_format_of :email, :with => RFC822::EMAIL
 
-bc. "user@home.domain.com" =~ RFC822::EMAIL ? puts("Email is valid.") : puts("Email is invalid")
+bc. "user@example.com" =~ RFC822::EMAIL ? puts("Email is valid.") : puts("Email is invalid")
+
+bc. RFC822.mx_records('user@mail.com') # => [#<struct RFC822::MXRecord priority=15, host="mailin-01.mx.aol.com">]
+
 
 
 h2. License
