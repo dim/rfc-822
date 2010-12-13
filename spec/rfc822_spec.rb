@@ -19,6 +19,7 @@ describe RFC822 do
       "slashed/user@home.com".should match(RFC822::EMAIL)            
       "plussed+user@home.com".should match(RFC822::EMAIL)            
       "{wrapped}user@home.com".should match(RFC822::EMAIL)            
+      "end-dashed-@home.com".should match(RFC822::EMAIL)            
     end
 
     it 'should not match non-RFC822 compliant addresses' do

@@ -1,14 +1,13 @@
 require 'rubygems'
-require 'spec/rake/spectask'
-require 'spec/version'
+require 'rake'
+require 'rspec/mocks/version'
+require 'rspec/core/rake_task'
+
+
+RSpec::Core::RakeTask.new(:spec)
 
 desc 'Default: run specs.'
 task :default => :spec
-
-Spec::Rake::SpecTask.new do |t|
-  t.spec_files = FileList['spec/**/*_spec.rb']
-  t.spec_opts = ['--colour', '--format', 'profile', '--timeout', '20']
-end
 
 begin
   require 'jeweler'

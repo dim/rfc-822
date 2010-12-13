@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rfc-822}
-  s.version = "0.2.3"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dimitrij Denissenko"]
-  s.date = %q{2010-08-04}
+  s.date = %q{2010-12-13}
   s.description = %q{RFC822 compatible email validation and MX record check}
   s.email = %q{dimitrij@blacksquaremedia.com}
   s.extra_rdoc_files = [
@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".gitignore",
+     "Gemfile",
+     "Gemfile.lock",
      "LICENSE",
      "README.textile",
      "Rakefile",
