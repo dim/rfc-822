@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 gemspec
 
-platform :rbx do
+platforms :rbx do
   gem 'psych'
   gem 'racc'
   gem 'rubysl', '~> 2.0'
