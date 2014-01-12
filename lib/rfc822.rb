@@ -4,21 +4,17 @@ require 'uri'
 module RFC822
   
   module Patterns
- 
-    def self.compile(string)
-      Regexp.new string, nil, 'n'
-    end
     
-    ATOM      = compile "[^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+"
+    ATOM      = "[^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c\\x3e\\x40\\x5b-\\x5d\\x7f-\\u00ff]+"
     
-    QTEXT     = compile "[^\\x0d\\x22\\x5c\\x80-\\xff]"  
-    QPAIR     = compile "\\x5c[\\x00-\\x7f]"
-    QSTRING   = compile "\\x22(?:#{QTEXT}|#{QPAIR})*\\x22"
+    QTEXT     = "[^\\x0d\\x22\\x5c\\u0080-\\u00ff]"  
+    QPAIR     = "\\x5c[\\x00-\\x7f]"
+    QSTRING   = "\\x22(?:#{QTEXT}|#{QPAIR})*\\x22"
     
-    WORD      = compile "(?:#{ATOM}|#{QSTRING})"
+    WORD      = "(?:#{ATOM}|#{QSTRING})"
 
-    LOCAL_PT  = compile "#{WORD}(?:\\x2e#{WORD})*"
-    ADDRESS   = compile "#{LOCAL_PT}\\x40#{URI::REGEXP::PATTERN::HOSTNAME}"    
+    LOCAL_PT  = "#{WORD}(?:\\x2e#{WORD})*"
+    ADDRESS   = "#{LOCAL_PT}\\x40#{URI::REGEXP::PATTERN::HOSTNAME}"    
 
   end
   

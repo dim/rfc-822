@@ -5,7 +5,8 @@ RFC822 compatible email validation and MX record check.
 
 h2. Features
 
-* Ruby 1.8 & 1.9 compatible
+* Ruby 1.9, 2.0 & 2.1 compatible
+* MRI, JRuby and Rubinius compatible
 * Email validation
 * MX checks (requires 'host' command line application)
 

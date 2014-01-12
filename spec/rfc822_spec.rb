@@ -48,7 +48,7 @@ describe RFC822 do
   describe 'MX record check' do
 
     before do
-      RFC822.stub!(:host_mx).and_return(%Q(
+      RFC822.stub(:host_mx).and_return(%Q(
 hotmail.com mail is handled by 5 mx3.hotmail.com.
 hotmail.com mail is handled by 5 mx4.hotmail.com.
 hotmail.com mail is handled by 5 mx1.hotmail.com.
