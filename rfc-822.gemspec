@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = "rfc-822"
   s.summary     = "RFC822 compatible email validation and MX record check"
   s.description = "RFC822 compatible email validation and MX record check"
-  s.version     = "0.4.0"
+  s.version     = "0.4.1"
 
   s.authors     = ["Dimitrij Denissenko", "Anthony Smith"]
   s.email       = "dimitrij@blacksquaremedia.com"
